@@ -33,7 +33,8 @@ def cria_pdf(result):
     pdf.ln(10)
     pdf.set_font('arial', '', 12.0)
     pdf.cell(page_width, 0.0, '(19 / MAIO / 2024)', align='R')
-    
 
+    
     return Response(pdf.output(dest='S').encode('latin-1'), mimetype='application/pdf',
                         headers={'Content-Disposition': 'attachment;filename=relatorio.pdf'})
+
